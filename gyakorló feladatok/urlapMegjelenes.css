@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+}
+main{
+    display: block;
+    margin: 10px auto;
+    max-width: 900px;
+    color: darkblue;
+}
+
+form{
+    background-color:rgb(244,244,244);
+
+}
+
+legend, input[type=submit]{
+    background-color: rgb(145,200,45);
+    color: rgb(255,255,255);
+    border: solid 2px rgb(144,164,22);
+    margin-left: 10px ;
+}
+
+#szemelyes{
+    color: rgb(126,175,201);
+    background-color: rgb(175,211,224);
+    border:rgb(175,211,224);
+    margin-bottom: 30px;
+
+}
+
+fieldset{
+    background-color: rgb(232,242,246);
+    border: rgb(126,175,201);
+}
+
+#szemelyesKeret{
+    background-color: white;
+    margin: 10px;
+}
+.sor{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#elsoKeret .sor{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#elsoKeret input{
+    width: 80%;
+    border: rgb(175,211,224) solid ;
+}
+
+input[type=submit]{
+    margin: 20px 0px 0px 0px;
+}
+
+.piros{
+    color: red;
+}
+#szemelyesKeret{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="feldolgoz.php" method="post" target="_blank" enctype="multipart/form-data"
+        oninput="ertek.value=parseInt(sur.value)">
+        <fieldset>
+            <legend>Személyes adatok</legend>
+
+            <label for="fnev">Név:</label>
+            <input type="text" name="fnev" id="fnev" required value="Rózsás Adrienn" />
+            <label for="fnev">*</label>
+            <br />
+            <label for="b">Probléma leírása:</label>
+            <input type="text" name="b" id="b" required placeholder="Probléma..." />
+            <label for="b">*</label>
+            <br>
+            <label for="kor">Kor</label>
+            <input type="number" name="kor" id="kor" min="0" max="200" step="5" />
+            <br>
+            <label for="mail">E-mail:</label>
+            <input type="email" name="mail" id="mail" />
+            <br>
+            <label for="mail2">E-mail:</label>
+            <input type="email" name="mail2" id="mail2" />
+        </fieldset>
+        <label for="idatum iido">Időpont:</label>
+        <input type="date" name="idatum" id="idatum">
+        <input type="time" name="iido" id="iido">
+        <br>
+        <label for="sur">Sürgőség: 1</label>
+        <input type="range" name="sur" id="sur" min="1" max="5" value="3">
+        <label for="sur">5 &bkarow;</label>
+        <output name="ertek" id="ertek">3</output>
+        <br>
+        <label for="fajl">Előző eleltek:</label>
+        <input type="file" name="fajl" id="fajl">
+        <br>
+        <fieldset>
+            <legend>Kór előzmőny</legend>
+            <label for="orvos">Kezelő orvos a rendelőintézetből</label>
+            <select name="orvos" id="orvos">
+                <optgroup label="felnőtt háziorvos">
+                    <option value="drpv">Dr. Kis Virág</option>
+                    <option value="drpv">Dr. Kovács József</option>
+                    <option value="drpv" selected>Dr. Piros Vincze</option>
+                </optgroup>
+                <optgroup label="Gyerekorvos">
+                    <option value="drpv2">Dr. Kis Virág</option>
+                    <option value="drpv2">Dr. Kovács József</option>
+                    <option value="drpv2">Dr. Piros Vincze</option>
+                </optgroup>
+            </select>
+            <label for="kinf">Körzet információ:</label>
+            <input type="text" name="kinf" id="kinf" value="14. körzet">
+            <br>
+            <label for="betegseg">Elöző betegségek</label>
+            <input type="checkbox" name="betegseg" id="b1" value="b1" checked>
+            <label for="betegseg">Nem volt betegsége korábban</label>
+            <input type="checkbox" name="betegseg" id="b2" value="b2" >
+            <label for="betegseg">Allergia</label>
+            <input type="checkbox" name="betegseg" id="b3" value="b3" >
+            <label for="betegseg">Csonttörés</label>
+            <input type="checkbox" name="betegseg" id="b4" value="b4" >
+            <label for="betegseg">Műtét</label>
+            <input type="checkbox" name="betegseg" id="b5" value="b5" >
+            <label for="betegseg">Tartós beteg</label>
+            <br>
+            <textarea rows="10" cols="30" name="reszletek" id=reszletek>Betegség részletezése... </textarea>
+        </fieldset>
+            <br>
+            <label for="ipont">Időpontok:</label>
+            <input type="radio" name="nap" value="h" id="h">
+            <label for="nap">Hétfő</label>
+            <input type="radio" name="nap" value="ke" id="ke" checked>
+            <label for="nap">Kedd</label>
+            <input type="radio" name="nap" value="sze" id="sze" >
+            <label for="nap">Szerda</label>
+            <input type="radio" name="nap" value="cs" id="cs">
+            <label for="nap">Csütörtök</label>
+            <input type="radio" name="nap" value="p" id="p">
+            <label for="nap">Péntek</label>
+            <input type="radio" name="nap" value="szo" id="szo">
+            <label for="nap">Szombat</label>
+            <br>
+            <label>Opcionális aszisztens</label>
+            <input list="aszisztensek" name="asz" id="asz">
+            <datalist id="aszisztensek" name="aszisztensek">
+                <option value="Nagy Mária"></option>
+                <option value="Horváth Ottó"></option>
+                <option value="Horpár Ildikó"></option>
+            </datalist>
+            <br>
+            <input type="reset" value="Alaphelyezet" name="ah" id="ah">
+            <input type="submit" value="Küldés" name="kuld" id="kuld">
+
+
+
+        
+
+    </form>
+</body>
+
+</html>

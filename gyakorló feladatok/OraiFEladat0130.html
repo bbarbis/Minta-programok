@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="urlapMegjelenes.css">
+</head>
+<body>
+    <main>
+        <form action="feldolgot.php" method="post">
+        <fieldset id="elsoKeret">
+            <legend>Regisztráció</legend>
+            <div class="sor">
+                <label for="nev ">felhasználónév 
+                <span class="piros">*</span></label>
+                <input type="text" id="nev" name="nev"
+                placeholder="csak ékezetmentes betűk" required>
+            </div>
+            <div class="sor">
+                <label for="jsz">jelszó 
+                <span class="piros">*</span></label>
+                <input type="password" id="jsz" name="jsz"
+                placeholder="min. 3 karakter" required>
+            </div>
+            <div class="sor">
+                <label for="mail">e-mail cím 
+                <span class="piros">*</span></label>
+                <input type="email" id="mail" name="mail"
+                placeholder="vmi@vmi.hu" required>
+            </div>
+                <fieldset>
+                    <legend>születés</legend>
+                        <div class="sor">
+                            <label for="szdatum">születési dátum</label>
+                            <div id="datumAdatok">
+                                <select name="szdatum ev" id="ev">
+                                    <option value="2004" selected>2004</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1980">1980</option>
+                                </select>
+                                <select name="szdatum honap" id="honap">
+                                    <option value="12" selected>12</option>
+                                    <option value="09">09</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <select name="szdatum nap" id="nap">
+                                    <option value="31" selected>31</option>
+                                    <option value="18">18</option>
+                                    <option value="09">09</option>
+                                </select>
+                            </div>
+                        </div>
+                </fieldset>
+                    <fieldset id="szemelyesKeret">
+                        <legend id="szemelyes">személyes</legend>
+                        <aside id="elso">
+                            <div class="sor">
+                                <input type="checkbox" name="nyelv" id="nyelv1" value="angol">
+                                <label for="nyelv1">angol </label>
+                            </div>
+                            <div class="sor">
+                                <input type="checkbox" name="nyelv" id="nyelv2" value="német" checked>
+                                <label for="nyelv2">német</label>
+                            </div>
+                        </aside>
+                        <aside id="masodik">
+                            <div class="sor">
+                                <input type="radio" name="szak" id="szf" value="szoftverfejlesztő" checked>
+                                <label for="szak">szoftverfejlesztő</label>
+                            </div>
+                            <div class="sor">
+                                <input type="radio" name="szak" id="iru" value="rendszergazda">
+                                <label for="szak">rendszergazda</label>
+                            </div>
+                            <div class="sor">
+                                <input type="radio" name="szak" id="egyeb" value="egyeb">
+                                <label for="szak">egyéb</label>
+                            </div>
+                        </aside>
+                        <aside id="harmadik">
+                            <div class="sor">
+                                <input type="radio" name="neme" id="no" value="no">
+                                <label for="neme">nő</label>
+                            </div>
+                            <div class="sor">
+                                <input type="radio" name="neme" id="ferfi" value="ferfi" checked>
+                                <label for="neme">férfi</label>
+                            </div>
+                        </aside>
+                    </fieldset>
+                </fieldset>
+            </fieldset>
+            <div class="sor">
+                <input type="submit" name="kuld" id="kuld"
+                value="regisztráció">
+            </div>
+        </form>
+    </main>
+    
+
+    
+</body>
+</html>
